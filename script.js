@@ -1,11 +1,11 @@
-function moveRandomEl(elm) {
-  elm.style.position = "absolute";
-  elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
-  elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+var b = document.querySelector("#movingbutton");
+b.addEventListener("click",change);
+
+function change()
+{
+let i = Math.floor(Math.random()*500)+1;
+let j = Math.floor(Math.random()*500)+1;
+console.log('here' , i ,j , b.style.left , b.style.top);
+    b.style.left = i+'px';
+    b.style.top = j + "px";
 }
-
-const moveRandom = document.querySelector("#move-random");
-
-moveRandom.addEventListener("mouseenter", function (e) {
-  moveRandomEl(e.target);
-});
